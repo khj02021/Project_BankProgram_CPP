@@ -27,11 +27,11 @@ using namespace std;
  * main function
 *******************************************************************************/
 int main(void) {
-	int choice = 0;
+	int choice;
 	Account account[MAX_NUM_ACCOUNT];
 	int count;
 
-	while(choice != 5) {
+	while(1) {
 		printMenu();
 		cout << ">> ";
 		cin >> choice;
@@ -53,7 +53,7 @@ int main(void) {
 			case 5:
 				cout << "Exiting..." << endl;
 				cout << endl;
-				break;
+				return 0;
 			default:
 				cout << "Enter between 1 and 5" << endl;
 				cout << endl;
